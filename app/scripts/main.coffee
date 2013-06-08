@@ -113,7 +113,10 @@ $(->
     );
 
   returnThumb = (cfg)->
-    "<li><img src='images/thumbnails/tmb_#{cfg.img}.png'/><label>Project Name</label></li>"
+    boldTitle = cfg.boldTitle || ""
+    title = cfg.title || ""
+
+    "<li><img src='images/thumbnails/tmb_#{cfg.img}.png'/><label><span class='bold'>#{boldTitle}</span> #{title}</label></li>"
 
   generateThumbs()
 )
